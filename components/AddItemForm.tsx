@@ -27,7 +27,7 @@ export default function AddItemForm({ guestName, onAdd }: AddItemFormProps) {
   const isDisabled = !guestName.trim()
 
   return (
-    <form onSubmit={handleSubmit} className="mb-6">
+    <form onSubmit={handleSubmit}>
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4">
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
           Add New Item

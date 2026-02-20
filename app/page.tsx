@@ -127,11 +127,15 @@ export default function HomePage() {
       {/* Sticky name header */}
       <GuestNameHeader guestName={guestName} onNameChange={handleNameChange} />
 
-      {/* Main content — offset by header height */}
-      <main className="max-w-lg mx-auto px-4 pt-24 pb-12">
-        {/* Add item form */}
-        <AddItemForm guestName={guestName} onAdd={handleAdd} />
+      {/* Sticky add item form */}
+      <div className="fixed top-[65px] left-0 right-0 z-40 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 border-b border-slate-200 shadow-sm">
+        <div className="max-w-lg mx-auto px-4 py-4">
+          <AddItemForm guestName={guestName} onAdd={handleAdd} />
+        </div>
+      </div>
 
+      {/* Main content — offset by header + form height */}
+      <main className="max-w-lg mx-auto px-4 pt-[215px] pb-12">
         {/* Error banner */}
         {error && (
           <div className="mb-4 flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-sm rounded-xl px-4 py-3">
