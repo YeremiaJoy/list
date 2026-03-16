@@ -82,6 +82,3 @@ create table public.guest_list (
   author_name  text      not null
 );
 ```
-# list
-
-
